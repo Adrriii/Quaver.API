@@ -23,6 +23,8 @@ namespace Quaver.API.Helpers
         {
             switch (mode)
             {
+                case GameMode.Keys1:
+                    return "1K";
                 case GameMode.Keys4:
                     if (hasScratch)
                         return "4K+1";
@@ -46,6 +48,8 @@ namespace Quaver.API.Helpers
         {
             switch (mode)
             {
+                case GameMode.Keys1:
+                    return "1 Keys";
                 case GameMode.Keys4:
                     return "4 Keys";
                 case GameMode.Keys7:

@@ -293,7 +293,7 @@ namespace Quaver.API.Maps.Parsers
                                 case "CircleSize":
                                     KeyCount = int.Parse(value, CultureInfo.InvariantCulture);
 
-                                    if (KeyCount != 4 && KeyCount != 7 && KeyCount != 5 && KeyCount != 8)
+                                    if (KeyCount != 1 && KeyCount != 4 && KeyCount != 7 && KeyCount != 5 && KeyCount != 8)
                                         IsValid = false;
                                     break;
                                 case "OverallDifficulty":
@@ -482,6 +482,9 @@ namespace Quaver.API.Maps.Parsers
             // Get the correct game mode based on the amount of keys the map has.
             switch (KeyCount)
             {
+                case 1:
+                    qua.Mode = GameMode.Keys1;
+                    break;
                 case 4:
                     qua.Mode = GameMode.Keys4;
                     break;

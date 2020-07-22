@@ -101,6 +101,12 @@ namespace Quaver.API.Replays.Virtual
             // Add virtual key bindings based on the game mode of the replay.
             switch (Map.Mode)
             {
+                case GameMode.Keys1:
+                    InputKeyStore = new List<VirtualReplayKeyBinding>()
+                    {
+                        new VirtualReplayKeyBinding(ReplayKeyPressState.K1),
+                    };
+                    break;
                 case GameMode.Keys4:
                     InputKeyStore = new List<VirtualReplayKeyBinding>()
                     {

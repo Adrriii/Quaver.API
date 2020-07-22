@@ -16,6 +16,7 @@ namespace Quaver.API.Enums
     public enum GameMode
     {
         Keys4 = 1,
-        Keys7 = 2
+        Keys7 = 2,
+        Keys1 = 3
     }
 }

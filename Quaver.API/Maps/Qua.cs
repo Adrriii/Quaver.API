@@ -484,6 +484,9 @@ namespace Quaver.API.Maps
 
             switch (Mode)
             {
+                case GameMode.Keys1:
+                    count = 1;
+                    break;
                 case GameMode.Keys4:
                     count = 4;
                     break;
@@ -604,8 +607,8 @@ namespace Quaver.API.Maps
         {
             switch (Mode)
             {
+                case GameMode.Keys1:
                 case GameMode.Keys4:
-                    return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
                 case GameMode.Keys7:
                     return new DifficultyProcessorKeys(this, new StrainConstantsKeys(), mods);
                 default:

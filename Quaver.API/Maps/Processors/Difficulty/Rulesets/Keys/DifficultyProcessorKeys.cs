@@ -145,6 +145,9 @@ namespace Quaver.API.Maps.Processors.Difficulty.Rulesets.Keys
             // Compute for overall difficulty
             switch (Map.Mode)
             {
+                case (GameMode.Keys1):
+                    OverallDifficulty = ComputeForOverallDifficulty(rate);
+                    break;
                 case (GameMode.Keys4):
                     OverallDifficulty = ComputeForOverallDifficulty(rate);
                     break;
@@ -193,6 +196,7 @@ namespace Quaver.API.Maps.Processors.Difficulty.Rulesets.Keys
                 // Assign Finger and Hand States
                 switch (Map.Mode)
                 {
+                    case GameMode.Keys1:
                     case GameMode.Keys4:
                         curHitOb.FingerState = LaneToFinger4K[Map.HitObjects[i].Lane];
                         curStrainData.Hand = LaneToHand4K[Map.HitObjects[i].Lane];
